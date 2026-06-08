@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Venues - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html" class="active">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Wedding Venues</h1>
+        <p>Find the perfect location for your special day, from elegant ballrooms to scenic outdoor spaces.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="price-filter">Price:</label>
+                <select id="price-filter" class="filter-select price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="low">Budget (Under ₹1,00,000)</option>
+                    <option value="medium">Mid-Range (₹1,00,000 - ₹3,00,000)</option>
+                    <option value="high">Luxury (Above ₹3,00,000)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rating-filter">Rating:</label>
+                <select id="rating-filter" class="filter-select rating-filter">
+                    <option value="all">All Ratings</option>
+                    <option value="4plus">4★ & Above</option>
+                    <option value="3plus">3★ & Above</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="venue-type-filter">Venue Type:</label>
+                <select id="venue-type-filter" class="filter-select venue-type-filter">
+                    <option value="all">All Types</option>
+                    <option value="banquet">Banquet Hall</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="resort">Resort</option>
+                    <option value="garden">Garden</option>
+                    <option value="heritage">Heritage</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" placeholder="Search venues...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vendors-grid">
+        <!-- Venue 1 -->
+        <div class="vendor-card" data-price="150000" data-location="delhi" data-rating="4.8" data-venue-type="banquet">
+            <div class="vendor-image">
+                <img src="images/venue 6.webp" alt="Emerald Gardens">
+            </div>
+            <div class="vendor-info">
+                <h3>Abirami Mahal</h3>
+               <div class="vendor-price">
+                <span>Podanur,Coimbatore</span>
+               </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (120 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Abirami Mahal situated in Coimbatore is your perfect choice for an  auspicious and happy beginning of a beautiful and bright future.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 2 -->
+        <div class="vendor-card" data-price="280000" data-location="mumbai" data-rating="4.9" data-venue-type="resort">
+            <div class="vendor-image">
+                <img src="images/venue5.webp" alt="Royal Palace Banquet">
+            </div>
+            <div class="vendor-info">
+                <h3>IBEX River Resort</h3>
+                <div class="vendor-price">
+                    <span>Ukkadam,Coimbatore</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (205 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,80,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Embark on your wedding journey with IBEX River Resort, where every  moment is meticulously crafted with care and attention to detail.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 3 -->
+        <div class="vendor-card" data-price="350000" data-location="bangalore" data-rating="4.7" data-venue-type="banquet">
+            <div class="vendor-image">
+                <img src="images/venue4.webp" alt="Lakeside Resort">
+            </div>
+            <div class="vendor-info">
+                <h3>KVM Thirumana Mahal</h3>
+                <div class="vendor-price">
+                    <span>Kavundampalayam</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹3,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>KVM Thirumana Mahal is a venue situated in Coimbatore. It  boasts of being one of the most spacious venues in town that is  available for you to host your weddings</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 4 -->
+        <div class="vendor-card" data-price="120000" data-location="hyderabad" data-rating="4.5" data-venue-type="hotel">
+            <div class="vendor-image">
+                <img src="images/venue3.webp" alt="Heritage Mansion">
+            </div>
+            <div class="vendor-info">
+                <h3>Grand Palace</h3>
+                <div class="vendor-price">
+                    <span>Vadavalli,Coimbatore</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5 (87 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,20,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>This wedding venue can be an excellent destination and place to  effortlessly have all your wedding ceremonies with your dear ones.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 5 -->
+        <div class="vendor-card" data-price="180000" data-location="chennai" data-rating="4.6" data-venue-type="hotel">
+            <div class="vendor-image">
+                <img src="images/venue2.webp" alt="Beachfront Resort">
+            </div>
+            <div class="vendor-info">
+                <h3>Aloft Coimbatore</h3>
+                <div class="vendor-price">
+                    <span>Singanallur</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,80,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Aloft Coimbatore Singanallur offers a banquet hall and a hotel that has to accommodate a guest list of 50-120 people at once  without any hindrance</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 6 -->
+        <div class="vendor-card" data-price="250000" data-location="delhi" data-rating="4.8" data-venue-type="hotel">
+            <div class="vendor-image">
+                <img src="images/venue1.webp" alt="Grand Ballroom">
+            </div>
+            <div class="vendor-info">
+                <h3>Zone Connect</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.8 (156 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Zone Connect Hotel is a 3-star hotel in Coimbatore city, which provides best class services to its clients. This establishment has excellent for residents</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 7 -->
+        <div class="vendor-card" data-price="320000" data-location="mumbai" data-rating="4.9" data-venue-type="garden">
+            <div class="vendor-image">
+                <img src="images/venue7.webp" alt="Skyline Terrace">
+            </div>
+            <div class="vendor-info">
+                <h3>Kayal,Coimbatore</h3>
+                <div class="vendor-price">
+                    <span>Kavundampalayam,Coimbatore</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (178 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹3,20,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>A rooftop venue with panoramic city views, perfect for a modern and sophisticated wedding.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 8 -->
+        <div class="vendor-card" data-price="150000" data-location="bangalore" data-rating="4.7" data-venue-type="garden">
+            <div class="vendor-image">
+                <img src="images/venue8.webp" alt="Garden Pavilion">
+            </div>
+            <div class="vendor-info">
+                <h3>Gtowers</h3>
+                <div class="vendor-price">
+                    <span>Racecourse,Coimbatore</span>
+                   </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (92 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>A charming pavilion surrounded by beautiful gardens, ideal for an intimate wedding ceremony.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 9 -->
+        <div class="vendor-card" data-price="180000" data-location="coimbatore" data-rating="4.8" data-venue-type="resort">
+            <div class="vendor-image">
+                <img src="images/venues.jpg" alt="Riverside Resort">
+            </div>
+            <div class="vendor-info">
+                <h3>Riverside Retreat</h3>
+                <div class="vendor-price">
+                    <span>Mettupalayam, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (115 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,80,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Riverside Retreat offers a serene natural setting with beautiful water views. Perfect for couples who want an outdoor wedding surrounded by nature's beauty.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Venue 10 -->
+        <div class="vendor-card" data-price="250000" data-location="coimbatore" data-rating="4.9" data-venue-type="heritage">
+            <div class="vendor-image">
+                <img src="images/invites.jpg" alt="Heritage Palace">
+            </div>
+            <div class="vendor-info">
+                <h3>Heritage Palace</h3>
+                <div class="vendor-price">
+                    <span>Peelamedu, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (130 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Heritage Palace is a beautifully restored historic property with elegant architecture and lush gardens. The perfect blend of old-world charm and modern amenities.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <section class="cta">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Let us help you find the perfect venue for your special day</p>
+        <a href="venue-request.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

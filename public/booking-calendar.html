@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Booking Calendar - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .calendar-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .calendar-title {
+            color: #0c2e60;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+        
+        .calendar-day-header {
+            text-align: center;
+            font-weight: 600;
+            color: #0c2e60;
+            padding: 10px;
+        }
+        
+        .calendar-day {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 80px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .calendar-day:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .calendar-day.available {
+            background-color: #e6f7e6;
+        }
+        
+        .calendar-day.unavailable {
+            background-color: #f7e6e6;
+            cursor: not-allowed;
+        }
+        
+        .calendar-day.selected {
+            background-color: #0c2e60;
+            color: white;
+        }
+        
+        .calendar-day-number {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .calendar-day-slots {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .booking-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 600px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #0c2e60;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .time-slot {
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .time-slot:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .time-slot.selected {
+            background-color: #0c2e60;
+            color: white;
+        }
+        
+        .time-slot.booked {
+            background-color: #f7e6e6;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+        
+        .package-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .package-option {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .package-option:hover {
+            border-color: #0c2e60;
+        }
+        
+        .package-option.selected {
+            border-color: #0c2e60;
+            background-color: rgba(12, 46, 96, 0.05);
+        }
+        
+        .package-name {
+            font-weight: 600;
+            color: #0c2e60;
+            margin-bottom: 5px;
+        }
+        
+        .package-price {
+            font-weight: 600;
+            color: #d4af37;
+        }
+        
+        .package-description {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .package-includes {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .btn-primary {
+            background-color: #0c2e60;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0a2550;
+        }
+        
+        .btn-secondary {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c09c30;
+        }
+        
+        .payment-summary {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .payment-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .payment-total {
+            font-weight: 600;
+            color: #0c2e60;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .deposit-info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+            }
+            
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .package-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .time-slots {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Vendor Booking Calendar</h1>
+                <p>Check availability and book your wedding vendors</p>
+            </div>
+        </section>
+
+        <section class="vendor-details">
+            <div class="container">
+                <div class="vendor-info">
+                    <h2 id="vendor-name">Loading vendor details...</h2>
+                    <p id="vendor-category"></p>
+                    <div class="vendor-rating">
+                        <span id="vendor-rating"></span>
+                        <span id="vendor-reviews"></span>
+                    </div>
+                    <p id="vendor-description"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h2 class="calendar-title">Select a Date</h2>
+                        <div class="calendar-nav">
+                            <button id="prev-month" class="btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                            <span id="current-month">May 2025</span>
+                            <button id="next-month" class="btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days-header">
+                        <div class="calendar-day-header">Sun</div>
+                        <div class="calendar-day-header">Mon</div>
+                        <div class="calendar-day-header">Tue</div>
+                        <div class="calendar-day-header">Wed</div>
+                        <div class="calendar-day-header">Thu</div>
+                        <div class="calendar-day-header">Fri</div>
+                        <div class="calendar-day-header">Sat</div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days">
+                        <!-- Calendar days will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="booking-form" id="booking-form">
+                    <h2>Complete Your Booking</h2>
+                    <div class="form-group">
+                        <label class="form-label">Selected Date</label>
+                        <input type="text" id="selected-date" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Available Time Slots</label>
+                        <div class="time-slots" id="time-slots">
+                            <!-- Time slots will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Select Package</label>
+                        <div class="package-options" id="package-options">
+                            <!-- Package options will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Special Requests</label>
+                        <textarea id="special-requests" class="form-control" rows="3" placeholder="Any special requests or requirements?"></textarea>
+                    </div>
+                    <div class="payment-summary">
+                        <h3>Payment Summary</h3>
+                        <div class="payment-row">
+                            <span>Package Price:</span>
+                            <span id="package-price">₹0</span>
+                        </div>
+                        <div class="payment-row">
+                            <span>Additional Services:</span>
+                            <span id="additional-services">₹0</span>
+                        </div>
+                        <div class="payment-row payment-total">
+                            <span>Total Amount:</span>
+                            <span id="total-amount">₹0</span>
+                        </div>
+                        <div class="deposit-info">
+                            <p>A 20% deposit (₹<span id="deposit-amount">0</span>) is required to confirm your booking.</p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="book-now-btn" class="btn-primary">Book Now & Pay Deposit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Making wedding planning easier</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                    <li><a href="decor.html">Decor</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Planning Tools</h3>
+                <ul>
+                    <li><a href="e-invites.html">E-Invites</a></li>
+                    <li><a href="budget-calculator.html">Budget Calculator</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="guest-management.html">Guest Management</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@wedease.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get vendor ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const vendorId = urlParams.get('id');
+            
+            if (!vendorId) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Fetch vendor details
+            fetchVendorDetails(vendorId);
+            
+            // Initialize calendar
+            initCalendar(vendorId);
+            
+            // Handle booking form submission
+            document.getElementById('book-now-btn').addEventListener('click', function() {
+                submitBooking(vendorId);
+            });
+        });
+        
+        async function fetchVendorDetails(vendorId) {
+            try {
+                const response = await fetch(`/api/vendors/${vendorId}`);
+                const vendor = await response.json();
+                
+                // Update vendor details in the UI
+                document.getElementById('vendor-name').textContent = vendor.name;
+                document.getElementById('vendor-category').textContent = vendor.category.charAt(0).toUpperCase() + vendor.category.slice(1);
+                document.getElementById('vendor-rating').textContent = `${vendor.averageRating.toFixed(1)} ★`;
+                document.getElementById('vendor-reviews').textContent = `(${vendor.reviews.length} reviews)`;
+                document.getElementById('vendor-description').textContent = vendor.description;
+                
+                // Populate package options
+                const packageOptionsContainer = document.getElementById('package-options');
+                packageOptionsContainer.innerHTML = '';
+                
+                vendor.pricing.packages.forEach((pkg, index) => {
+                    const packageOption = document.createElement('div');
+                    packageOption.className = 'package-option';
+                    packageOption.dataset.packageId = index;
+                    packageOption.dataset.packageName = pkg.name;
+                    packageOption.dataset.packagePrice = pkg.price;
+                    
+                    packageOption.innerHTML = `
+                        <div class="package-name">${pkg.name}</div>
+                        <div class="package-price">₹${pkg.price.toLocaleString()}</div>
+                        <div class="package-description">${pkg.description}</div>
+                        <div class="package-includes">
+                            <strong>Includes:</strong> ${pkg.includes.join(', ')}
+                        </div>
+                    `;
+                    
+                    packageOption.addEventListener('click', function() {
+                        // Remove selected class from all package options
+                        document.querySelectorAll('.package-option').forEach(option => {
+                            option.classList.remove('selected');
+                        });
+                        
+                        // Add selected class to clicked package option
+                        this.classList.add('selected');
+                        
+                        // Update payment summary
+                        updatePaymentSummary(pkg.price);
+                    });
+                    
+                    packageOptionsContainer.appendChild(packageOption);
+                });
+                
+            } catch (error) {
+                console.error('Error fetching vendor details:', error);
+                document.getElementById('vendor-name').textContent = 'Error loading vendor details';
+            }
+        }
+        
+        async function initCalendar(vendorId) {
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+            
+            // Update current month display
+            document.getElementById('current-month').textContent = new Date(currentYear, currentMonth, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            // Generate calendar days
+            generateCalendarDays(currentYear, currentMonth, vendorId);
+            
+            // Add event listeners for month navigation
+            document.getElementById('prev-month').addEventListener('click', function() {
+                const currentMonthText = document.getElementById('current-month').textContent;
+                const [month, year] = currentMonthText.split(' ');
+                
+                const monthIndex = new Date(`${month} 1, ${year}`).getMonth();
+                const yearNum = parseInt(year);
+                
+                let newMonth = monthIndex - 1;
+                let newYear = yearNum;
+                
+                if (newMonth < 0) {
+                    newMonth = 11;
+                    newYear--;
+                }
+                
+                document.getElementById('current-month').textContent = new Date(newYear, newMonth, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                generateCalendarDays(newYear, newMonth, vendorId);
+            });
+            
+            document.getElementById('next-month').addEventListener('click', function() {
+                const currentMonthText = document.getElementById('current-month').textContent;
+                const [month, year] = currentMonthText.split(' ');
+                
+                const monthIndex = new Date(`${month} 1, ${year}`).getMonth();
+                const yearNum = parseInt(year);
+                
+                let newMonth = monthIndex + 1;
+                let newYear = yearNum;
+                
+                if (newMonth > 11) {
+                    newMonth = 0;
+                    newYear++;
+                }
+                
+                document.getElementById('current-month').textContent = new Date(newYear, newMonth, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                generateCalendarDays(newYear, newMonth, vendorId);
+            });
+        }
+        
+        async function generateCalendarDays(year, month, vendorId) {
+            const calendarDays = document.getElementById('calendar-days');
+            calendarDays.innerHTML = '';
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // Add empty cells for days before the first day of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'calendar-day empty';
+                calendarDays.appendChild(emptyDay);
+            }
+            
+            // Fetch vendor availability for the month
+            try {
+                const response = await fetch(`/api/vendors/${vendorId}/availability?year=${year}&month=${month + 1}`);
+                const availability = await response.json();
+                
+                // Create calendar days
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(year, month, day);
+                    const dateString = date.toISOString().split('T')[0];
+                    
+                    const calendarDay = document.createElement('div');
+                    calendarDay.className = 'calendar-day';
+                    
+                    // Check if date is in the past
+                    if (date < new Date().setHours(0, 0, 0, 0)) {
+                        calendarDay.classList.add('unavailable');
+                    } 
+                    // Check if date has availability
+                    else if (availability.dates && availability.dates.includes(dateString)) {
+                        calendarDay.classList.add('available');
+                        calendarDay.dataset.date = dateString;
+                        
+                        calendarDay.addEventListener('click', function() {
+                            // Remove selected class from all days
+                            document.querySelectorAll('.calendar-day').forEach(day => {
+                                day.classList.remove('selected');
+                            });
+                            
+                            // Add selected class to clicked day
+                            this.classList.add('selected');
+                            
+                            // Update selected date in the booking form
+                            document.getElementById('selected-date').value = dateString;
+                            
+                            // Fetch time slots for the selected date
+                            fetchTimeSlots(vendorId, dateString);
+                            
+                            // Show booking form
+                            document.getElementById('booking-form').style.display = 'block';
+                            
+                            // Scroll to booking form
+                            document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });
+                        });
+                    }
+                    
+                    calendarDay.innerHTML = `
+                        <div class="calendar-day-number">${day}</div>
+                        <div class="calendar-day-slots">
+                            ${availability.dates && availability.dates.includes(dateString) ? 
+                                '<span class="available-text">Available</span>' : 
+                                '<span class="unavailable-text">Unavailable</span>'}
+                        </div>
+                    `;
+                    
+                    calendarDays.appendChild(calendarDay);
+                }
+            } catch (error) {
+                console.error('Error fetching availability:', error);
+                
+                // Create calendar days without availability data
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(year, month, day);
+                    
+                    const calendarDay = document.createElement('div');
+                    calendarDay.className = 'calendar-day';
+                    
+                    // Check if date is in the past
+                    if (date < new Date().setHours(0, 0, 0, 0)) {
+                        calendarDay.classList.add('unavailable');
+                    }
+                    
+                    calendarDay.innerHTML = `
+                        <div class="calendar-day-number">${day}</div>
+                        <div class="calendar-day-slots">
+                            <span class="unavailable-text">Unknown</span>
+                        </div>
+                    `;
+                    
+                    calendarDays.appendChild(calendarDay);
+                }
+            }
+        }
+        
+        async function fetchTimeSlots(vendorId, date) {
+            try {
+                const response = await fetch(`/api/vendors/${vendorId}/time-slots?date=${date}`);
+                const data = await response.json();
+                
+                const timeSlotsContainer = document.getElementById('time-slots');
+                timeSlotsContainer.innerHTML = '';
+                
+                if (data.timeSlots && data.timeSlots.length > 0) {
+                    data.timeSlots.forEach(slot => {
+                        const timeSlot = document.createElement('div');
+                        timeSlot.className = `time-slot ${slot.isBooked ? 'booked' : ''}`;
+                        timeSlot.textContent = `${slot.start} - ${slot.end}`;
+                        timeSlot.dataset.start = slot.start;
+                        timeSlot.dataset.end = slot.end;
+                        
+                        if (!slot.isBooked) {
+                            timeSlot.addEventListener('click', function() {
+                                // Remove selected class from all time slots
+                                document.querySelectorAll('.time-slot').forEach(slot => {
+                                    slot.classList.remove('selected');
+                                });
+                                
+                                // Add selected class to clicked time slot
+                                this.classList.add('selected');
+                            });
+                        }
+                        
+                        timeSlotsContainer.appendChild(timeSlot);
+                    });
+                } else {
+                    timeSlotsContainer.innerHTML = '<p>No time slots available for this date.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching time slots:', error);
+                document.getElementById('time-slots').innerHTML = '<p>Error loading time slots. Please try again.</p>';
+            }
+        }
+        
+        function updatePaymentSummary(packagePrice) {
+            const additionalServices = 0; // You can add logic for additional services later
+            const totalAmount = packagePrice + additionalServices;
+            const depositAmount = totalAmount * 0.2; // 20% deposit
+            
+            document.getElementById('package-price').textContent = `₹${packagePrice.toLocaleString()}`;
+            document.getElementById('additional-services').textContent = `₹${additionalServices.toLocaleString()}`;
+            document.getElementById('total-amount').textContent = `₹${totalAmount.toLocaleString()}`;
+            document.getElementById('deposit-amount').textContent = depositAmount.toLocaleString();
+        }
+        
+        async function submitBooking(vendorId) {
+            // Get selected date
+            const selectedDate = document.getElementById('selected-date').value;
+            if (!selectedDate) {
+                alert('Please select a date');
+                return;
+            }
+            
+            // Get selected time slot
+            const selectedTimeSlot = document.querySelector('.time-slot.selected');
+            if (!selectedTimeSlot) {
+                alert('Please select a time slot');
+                return;
+            }
+            
+            // Get selected package
+            const selectedPackage = document.querySelector('.package-option.selected');
+            if (!selectedPackage) {
+                alert('Please select a package');
+                return;
+            }
+            
+            // Get special requests
+            const specialRequests = document.getElementById('special-requests').value;
+            
+            // Create booking data
+            const bookingData = {
+                vendorId: vendorId,
+                date: selectedDate,
+                time: {
+                    start: selectedTimeSlot.dataset.start,
+                    end: selectedTimeSlot.dataset.end
+                },
+                package: {
+                    name: selectedPackage.dataset.packageName,
+                    price: parseFloat(selectedPackage.dataset.packagePrice)
+                },
+                customRequests: specialRequests,
+                totalAmount: parseFloat(selectedPackage.dataset.packagePrice)
+            };
+            
+            try {
+                // Check if user is logged in
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    // Save booking data to session storage and redirect to login
+                    sessionStorage.setItem('pendingBooking', JSON.stringify(bookingData));
+                    window.location.href = 'login.html?redirect=booking-calendar.html?id=' + vendorId;
+                    return;
+                }
+                
+                // Submit booking
+                const response = await fetch('/api/bookings', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(bookingData)
+                });
+                
+                if (response.ok) {
+                    const booking = await response.json();
+                    
+                    // Redirect to payment page
+                    window.location.href = `payment.html?bookingId=${booking._id}`;
+                } else {
+                    const error = await response.json();
+                    alert(`Booking failed: ${error.message}`);
+                }
+            } catch (error) {
+                console.error('Error submitting booking:', error);
+                alert('An error occurred while submitting your booking. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

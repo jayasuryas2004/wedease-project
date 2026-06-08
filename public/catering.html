@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Catering - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html" class="active">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Wedding Catering</h1>
+        <p>Delight your guests with exquisite cuisine from our selection of top caterers.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="price-filter">Price:</label>
+                <select id="price-filter" class="filter-select price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="low">Budget (Under ₹1,000/plate)</option>
+                    <option value="medium">Mid-Range (₹1,000 - ₹2,500/plate)</option>
+                    <option value="high">Premium (Above ₹2,500/plate)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="cuisine-filter">Cuisine:</label>
+                <select id="cuisine-filter" class="filter-select cuisine-filter">
+                    <option value="all">All Cuisines</option>
+                    <option value="north-indian">North Indian</option>
+                    <option value="south-indian">South Indian</option>
+                    <option value="continental">Continental</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="multi-cuisine">Multi-Cuisine</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" placeholder="Search caterers...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vendors-grid">
+        <!-- Caterer 1 -->
+        <div class="vendor-card" data-price="1500" data-location="delhi" data-rating="4.9" data-cuisine="multi-cuisine">
+            <div class="vendor-image">
+                <img src="images/catering5.jpg" alt="Royal Feast">
+            </div>
+            <div class="vendor-info">
+                <h3>Royal Feast</h3>
+                <div class="vendor-price">
+                    <span>Ukkadam,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (145 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,500 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Premium multi-cuisine catering with live counters and customizable menus for weddings.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 2 -->
+        <div class="vendor-card" data-price="3000" data-location="mumbai" data-rating="5.0" data-cuisine="north-indian">
+            <div class="vendor-image">
+                <img src="images/catering2.jpg" alt="Luxury Bites">
+            </div>
+            <div class="vendor-info">
+                <h3>Luxury Bites</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹3,000 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Luxury North Indian cuisine with signature dishes and premium presentation for elite weddings.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 3 -->
+        <div class="vendor-card" data-price="1200" data-location="bangalore" data-rating="4.7" data-cuisine="south-indian">
+            <div class="vendor-image">
+                <img src="images/catering3.jpg" alt="South Spice">
+            </div>
+            <div class="vendor-info">
+                <h3>South Spice</h3>
+                <div class="vendor-price">
+                    <span>Ondipudur,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,200 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Authentic South Indian wedding catering with traditional banana leaf service options.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 4 -->
+        <div class="vendor-card" data-price="2200" data-location="hyderabad" data-rating="4.8" data-cuisine="multi-cuisine">
+            <div class="vendor-image">
+                <img src="images/catering4.jpg" alt="Global Flavors">
+            </div>
+            <div class="vendor-info">
+                <h3>Global Flavors</h3>
+                <div class="vendor-price">
+                    <span>Racecourse,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (125 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,200 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>International cuisine options with global food stations and fusion dishes for modern weddings.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 5 -->
+        <div class="vendor-card" data-price="900" data-location="chennai" data-rating="4.6" data-cuisine="south-indian">
+            <div class="vendor-image">
+                <img src="images/catering5.jpg" alt="Traditional Tastes">
+            </div>
+            <div class="vendor-info">
+                <h3>Traditional Tastes</h3>
+                <div class="vendor-price">
+                    <span>Sulur,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (105 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹900 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Budget-friendly traditional South Indian catering with authentic homestyle cooking.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 6 -->
+        <div class="vendor-card" data-price="2800" data-location="delhi" data-rating="4.9" data-cuisine="continental">
+            <div class="vendor-image">
+                <img src="images/catering6.avif" alt="Gourmet Affairs">
+            </div>
+            <div class="vendor-info">
+                <h3>Gourmet Affairs</h3>
+                <div class="vendor-price">
+                    <span>Ganapathy,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (87 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,800 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Premium Continental and European cuisine with celebrity chefs and gourmet presentation.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 7 -->
+        <div class="vendor-card" data-price="1800" data-location="mumbai" data-rating="4.7" data-cuisine="chinese">
+            <div class="vendor-image">
+                <img src="images/catering7.avif" alt="Asian Delights">
+            </div>
+            <div class="vendor-info">
+                <h3>Asian Delights</h3>
+                <div class="vendor-price">
+                    <span>Saravanampatty,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (92 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,800 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Specialized Asian cuisine with Chinese, Thai, and Japanese options for fusion weddings.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+       
+
+        <!-- Caterer 8 -->
+        <div class="vendor-card" data-price="2500" data-location="hyderabad" data-rating="4.9" data-cuisine="multi-cuisine">
+            <div class="vendor-image">
+                <img src="images/catering 8.avif" alt="Culinary Masters">
+            </div>
+            <div class="vendor-info">
+                <h3>Culinary Masters</h3>
+                <div class="vendor-price">
+                    <span>Pollachi,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (95 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,500 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Premium multi-cuisine catering with molecular gastronomy and innovative food presentations.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Caterer 9 -->
+        <div class="vendor-card" data-price="1600" data-location="coimbatore" data-rating="4.8" data-cuisine="vegetarian">
+            <div class="vendor-image">
+                <img src="images/catering.jpg" alt="Green Gourmet">
+            </div>
+            <div class="vendor-info">
+                <h3>Green Gourmet</h3>
+                <div class="vendor-price">
+                    <span>Peelamedu, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (110 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,600 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Green Gourmet specializes in premium vegetarian and vegan catering options with organic ingredients and sustainable practices. Perfect for eco-conscious couples.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Caterer 10 -->
+        <div class="vendor-card" data-price="2000" data-location="coimbatore" data-rating="4.9" data-cuisine="fusion">
+            <div class="vendor-image">
+                <img src="images/catering1.jpg" alt="Fusion Flavors">
+            </div>
+            <div class="vendor-info">
+                <h3>Fusion Flavors</h3>
+                <div class="vendor-price">
+                    <span>Race Course, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (125 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,000 per plate</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Fusion Flavors creates innovative culinary experiences by blending traditional South Indian flavors with international cuisines. Their signature dishes are perfect for couples wanting unique wedding menus.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <section class="cta">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Let us help you find the perfect caterer for your special day</p>
+        <a href="venue-request.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

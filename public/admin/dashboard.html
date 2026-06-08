@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Wedease</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <div class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="../images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="vendors.html"><i class="fas fa-store"></i> Vendors</a></li>
+                    <li><a href="bookings.html"><i class="fas fa-calendar-check"></i> Bookings</a></li>
+                    <li><a href="invites.html"><i class="fas fa-envelope-open-text"></i> E-Invites</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li class="logout-item"><a href="#" id="admin-logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="admin-content">
+            <!-- Top Header -->
+            <div class="admin-header">
+                <div class="admin-header-left">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="admin-header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="admin-profile">
+                        <span class="admin-name">Admin</span>
+                        <div class="admin-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stat-card users">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Users</h3>
+                            <p class="stat-count" id="user-count">0</p>
+                            <p class="stat-growth">+5% this week</p>
+                        </div>
+                    </div>
+                    <div class="stat-card vendors">
+                        <div class="stat-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Vendors</h3>
+                            <p class="stat-count" id="vendor-count">0</p>
+                            <p class="stat-growth">+3% this week</p>
+                        </div>
+                    </div>
+                    <div class="stat-card bookings">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Bookings</h3>
+                            <p class="stat-count" id="booking-count">0</p>
+                            <p class="stat-growth">+8% this week</p>
+                        </div>
+                    </div>
+                    <div class="stat-card revenue">
+                        <div class="stat-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Revenue</h3>
+                            <p class="stat-count" id="revenue-count">₹0</p>
+                            <p class="stat-growth">+12% this week</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity & Charts -->
+                <div class="dashboard-row">
+                    <!-- Recent Activity -->
+                    <div class="dashboard-card recent-activity">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="card-content">
+                            <ul class="activity-list" id="activity-list">
+                                <li class="activity-item loading">
+                                    <div class="activity-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                                    <div class="activity-details">
+                                        <p>Loading recent activities...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Booking Chart -->
+                    <div class="dashboard-card booking-chart">
+                        <div class="card-header">
+                            <h3>Booking Statistics</h3>
+                            <div class="chart-period">
+                                <button class="period-btn active" data-period="week">Week</button>
+                                <button class="period-btn" data-period="month">Month</button>
+                                <button class="period-btn" data-period="year">Year</button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="chart-container">
+                                <canvas id="bookingChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookings & Popular Vendors -->
+                <div class="dashboard-row">
+                    <!-- Recent Bookings -->
+                    <div class="dashboard-card recent-bookings">
+                        <div class="card-header">
+                            <h3>Recent Bookings</h3>
+                            <a href="bookings.html" class="view-all">View All</a>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Booking ID</th>
+                                            <th>User</th>
+                                            <th>Vendor</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recent-bookings-table">
+                                        <tr class="loading-row">
+                                            <td colspan="6">Loading bookings...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Vendors -->
+                    <div class="dashboard-card popular-vendors">
+                        <div class="card-header">
+                            <h3>Popular Vendors</h3>
+                            <a href="vendors.html" class="view-all">View All</a>
+                        </div>
+                        <div class="card-content">
+                            <ul class="vendor-list" id="popular-vendors-list">
+                                <li class="vendor-item loading">
+                                    <div class="vendor-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                                    <div class="vendor-details">
+                                        <p>Loading popular vendors...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

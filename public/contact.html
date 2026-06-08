@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="/api/contact" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

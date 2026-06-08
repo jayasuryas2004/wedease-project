@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Details - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="vendor-details-section">
+        <div class="container">
+            <div class="vendor-details-container">
+                <!-- Vendor details will be loaded dynamically -->
+                <div id="vendor-details">
+                    <div class="vendor-header">
+                        <div class="vendor-info">
+                            <h1 id="vendor-name">Loading vendor details...</h1>
+                            <div class="vendor-meta">
+                                <span id="vendor-category"></span>
+                                <div class="vendor-rating">
+                                    <span id="vendor-rating-stars"></span>
+                                    <span id="vendor-review-count"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vendor-actions">
+                            <button class="book-now-btn" id="main-book-btn" data-vendor-id="">Book Now</button>
+                            <button class="request-pricing-btn" id="main-pricing-btn" data-vendor-id="">Request Pricing</button>
+                        </div>
+                    </div>
+
+                    <div class="vendor-gallery">
+                        <div class="main-image">
+                            <img id="main-vendor-image" src="images/placeholder.jpg" alt="Vendor">
+                        </div>
+                        <div class="thumbnail-container" id="image-thumbnails">
+                            <!-- Thumbnails will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="vendor-content">
+                        <div class="vendor-description">
+                            <h2>About</h2>
+                            <p id="vendor-description">Loading description...</p>
+                        </div>
+
+                        <div class="vendor-packages">
+                            <h2>Packages</h2>
+                            <div id="packages-container">
+                                <!-- Packages will be loaded here -->
+                                <p>Loading packages...</p>
+                            </div>
+                        </div>
+
+                        <div class="vendor-contact">
+                            <h2>Contact Information</h2>
+                            <div class="contact-details" id="contact-details">
+                                <!-- Contact details will be loaded here -->
+                            </div>
+                        </div>
+
+                        <div class="vendor-location">
+                            <h2>Location</h2>
+                            <div id="vendor-address">
+                                <!-- Address will be loaded here -->
+                            </div>
+                            <div id="map" class="vendor-map">
+                                <!-- Map will be loaded here -->
+                            </div>
+                        </div>
+
+                        <div class="vendor-reviews">
+                            <h2>Reviews</h2>
+                            <div id="reviews-container">
+                                <!-- Reviews will be loaded here -->
+                                <p>Loading reviews...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+    <script>
+        // Function to get URL parameters
+        function getUrlParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Function to load vendor details
+        async function loadVendorDetails() {
+            const vendorId = getUrlParam('id');
+            if (!vendorId) {
+                document.getElementById('vendor-name').textContent = 'Vendor not found';
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/vendors/${vendorId}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch vendor details');
+                }
+
+                const vendor = await response.json();
+                
+                // Update page title
+                document.title = `${vendor.name} - Wedease`;
+                
+                // Update vendor details
+                document.getElementById('vendor-name').textContent = vendor.name;
+                document.getElementById('vendor-category').textContent = vendor.category.charAt(0).toUpperCase() + vendor.category.slice(1);
+                document.getElementById('vendor-description').textContent = vendor.description;
+                
+                // Update booking buttons
+                const bookButtons = document.querySelectorAll('.book-now-btn');
+                const pricingButtons = document.querySelectorAll('.request-pricing-btn');
+                
+                bookButtons.forEach(btn => {
+                    btn.setAttribute('data-vendor-id', vendorId);
+                });
+                
+                pricingButtons.forEach(btn => {
+                    btn.setAttribute('data-vendor-id', vendorId);
+                });
+                
+                // Update rating
+                const ratingStars = getRatingStars(vendor.averageRating);
+                document.getElementById('vendor-rating-stars').innerHTML = ratingStars;
+                document.getElementById('vendor-review-count').textContent = `(${vendor.reviews ? vendor.reviews.length : 0} reviews)`;
+                
+                // Update gallery
+                if (vendor.images && vendor.images.length > 0) {
+                    document.getElementById('main-vendor-image').src = vendor.images[0].url;
+                    document.getElementById('main-vendor-image').alt = vendor.images[0].caption || vendor.name;
+                    
+                    const thumbnailsContainer = document.getElementById('image-thumbnails');
+                    thumbnailsContainer.innerHTML = '';
+                    
+                    vendor.images.forEach((image, index) => {
+                        const thumbnail = document.createElement('div');
+                        thumbnail.className = 'thumbnail';
+                        thumbnail.innerHTML = `<img src="${image.url}" alt="${image.caption || `${vendor.name} image ${index + 1}`}">`;
+                        
+                        thumbnail.addEventListener('click', () => {
+                            document.getElementById('main-vendor-image').src = image.url;
+                            document.getElementById('main-vendor-image').alt = image.caption || vendor.name;
+                        });
+                        
+                        thumbnailsContainer.appendChild(thumbnail);
+                    });
+                }
+                
+                // Update packages
+                const packagesContainer = document.getElementById('packages-container');
+                packagesContainer.innerHTML = '';
+                
+                if (vendor.pricing && vendor.pricing.packages && vendor.pricing.packages.length > 0) {
+                    vendor.pricing.packages.forEach(pkg => {
+                        const packageCard = document.createElement('div');
+                        packageCard.className = 'package-card';
+                        
+                        const includesList = pkg.includes && pkg.includes.length > 0 
+                            ? `<ul>${pkg.includes.map(item => `<li>${item}</li>`).join('')}</ul>` 
+                            : '';
+                        
+                        packageCard.innerHTML = `
+                            <div class="package-header">
+                                <h3 class="package-name">${pkg.name}</h3>
+                                <span class="package-price">${formatCurrency(pkg.price, vendor.pricing.currency)}</span>
+                            </div>
+                            <div class="package-details">
+                                <p>${pkg.description || ''}</p>
+                                ${includesList}
+                            </div>
+                            <div class="package-actions">
+                                <button class="book-now-btn" data-vendor-id="${vendorId}" data-package="${pkg.name}">Book Now</button>
+                                <button class="request-pricing-btn" data-vendor-id="${vendorId}" data-package="${pkg.name}">Request Pricing</button>
+                            </div>
+                        `;
+                        
+                        packagesContainer.appendChild(packageCard);
+                    });
+                } else {
+                    // Add base package
+                    const basePackage = document.createElement('div');
+                    basePackage.className = 'package-card';
+                    basePackage.innerHTML = `
+                        <div class="package-header">
+                            <h3 class="package-name">Base Package</h3>
+                            <span class="package-price">${formatCurrency(vendor.pricing.basePrice, vendor.pricing.currency)}</span>
+                        </div>
+                        <div class="package-details">
+                            <p>Standard services for your event.</p>
+                        </div>
+                        <div class="package-actions">
+                            <button class="book-now-btn" data-vendor-id="${vendorId}">Book Now</button>
+                            <button class="request-pricing-btn" data-vendor-id="${vendorId}">Request Pricing</button>
+                        </div>
+                    `;
+                    
+                    packagesContainer.appendChild(basePackage);
+                }
+                
+                // Update contact details
+                const contactDetails = document.getElementById('contact-details');
+                contactDetails.innerHTML = '';
+                
+                if (vendor.contact) {
+                    if (vendor.contact.phone) {
+                        contactDetails.innerHTML += `
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>${vendor.contact.phone}</span>
+                            </div>
+                        `;
+                    }
+                    
+                    if (vendor.contact.email) {
+                        contactDetails.innerHTML += `
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>${vendor.contact.email}</span>
+                            </div>
+                        `;
+                    }
+                    
+                    if (vendor.contact.website) {
+                        contactDetails.innerHTML += `
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <a href="${vendor.contact.website}" target="_blank">${vendor.contact.website}</a>
+                            </div>
+                        `;
+                    }
+                }
+                
+                // Update address
+                const addressContainer = document.getElementById('vendor-address');
+                addressContainer.innerHTML = '';
+                
+                if (vendor.address) {
+                    const addressParts = [];
+                    if (vendor.address.street) addressParts.push(vendor.address.street);
+                    if (vendor.address.city) addressParts.push(vendor.address.city);
+                    if (vendor.address.state) addressParts.push(vendor.address.state);
+                    if (vendor.address.zipCode) addressParts.push(vendor.address.zipCode);
+                    if (vendor.address.country) addressParts.push(vendor.address.country);
+                    
+                    const fullAddress = addressParts.join(', ');
+                    
+                    addressContainer.innerHTML = `
+                        <div class="address-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${fullAddress}</span>
+                        </div>
+                    `;
+                    
+                    // Add Google Maps embed if address is available
+                    const mapContainer = document.getElementById('map');
+                    mapContainer.innerHTML = `
+                        <iframe 
+                            src="https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0"
+                            style="width: 100%; height: 300px; border-radius: 8px;">
+                        </iframe>
+                    `;
+                }
+                
+                // Update reviews
+                const reviewsContainer = document.getElementById('reviews-container');
+                reviewsContainer.innerHTML = '';
+                
+                if (vendor.reviews && vendor.reviews.length > 0) {
+                    vendor.reviews.forEach(review => {
+                        const reviewCard = document.createElement('div');
+                        reviewCard.className = 'review-card';
+                        
+                        reviewCard.innerHTML = `
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">${review.userId || 'Anonymous'}</span>
+                                    <span class="review-date">${formatDate(review.date)}</span>
+                                </div>
+                                <div class="review-rating">
+                                    ${getRatingStars(review.rating)}
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p>${review.comment}</p>
+                            </div>
+                        `;
+                        
+                        reviewsContainer.appendChild(reviewCard);
+                    });
+                } else {
+                    reviewsContainer.innerHTML = '<p>No reviews yet. Be the first to review!</p>';
+                }
+                
+                // Add event listeners to new buttons
+                const newBookButtons = document.querySelectorAll('.book-now-btn');
+                const newPricingButtons = document.querySelectorAll('.request-pricing-btn');
+                
+                newBookButtons.forEach(button => {
+                    const vendorId = button.getAttribute('data-vendor-id');
+                    const packageName = button.getAttribute('data-package');
+                    
+                    button.addEventListener('click', () => {
+                        bookNow(vendorId, packageName);
+                    });
+                });
+                
+                newPricingButtons.forEach(button => {
+                    const vendorId = button.getAttribute('data-vendor-id');
+                    const packageName = button.getAttribute('data-package');
+                    
+                    button.addEventListener('click', () => {
+                        requestPricing(vendorId, packageName);
+                    });
+                });
+                
+            } catch (error) {
+                console.error('Error loading vendor details:', error);
+                document.getElementById('vendor-name').textContent = 'Error loading vendor details';
+            }
+        }
+
+        // Helper function to generate star rating HTML
+        function getRatingStars(rating) {
+            const fullStars = Math.floor(rating);
+            const halfStar = rating % 1 >= 0.5;
+            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+            
+            let starsHtml = '';
+            
+            // Full stars
+            for (let i = 0; i < fullStars; i++) {
+                starsHtml += '<i class="fas fa-star"></i>';
+            }
+            
+            // Half star
+            if (halfStar) {
+                starsHtml += '<i class="fas fa-star-half-alt"></i>';
+            }
+            
+            // Empty stars
+            for (let i = 0; i < emptyStars; i++) {
+                starsHtml += '<i class="far fa-star"></i>';
+            }
+            
+            return starsHtml;
+        }
+
+        // Helper function to format currency
+        function formatCurrency(amount, currency = 'INR') {
+            return new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: currency
+            }).format(amount);
+        }
+
+        // Helper function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+
+        // Load vendor details when the page loads
+        document.addEventListener('DOMContentLoaded', loadVendorDetails);
+    </script>
+</body>
+</html>

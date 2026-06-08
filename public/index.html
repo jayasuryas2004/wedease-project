@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedease - Wedding & Event Planning Simplified</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user-menu.css">
+    <link rel="stylesheet" href="css/location-vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <!-- Location Badge -->
+                <div class="location-badge" id="location-badge" title="Click to change location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="current-city">Select City</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Dream Wedding,<br><span>Beautifully Planned</span></h1>
+            <p>Find and book the perfect vendors for your special day</p>
+            <div class="hero-buttons">
+                <a href="#categories" class="explore-btn">Explore Services</a>
+                <a href="#e-invites" class="contact-btn">Create E-Invites</a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search services">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="category-icons">
+            <div class="category-item">
+                <a href="venues.html">
+                    <div class="icon-container">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <p>Venues</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="photography.html">
+                    <div class="icon-container">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <p>Photography</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="makeup.html">
+                    <div class="icon-container">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <p>Makeup</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="decor.html">
+                    <div class="icon-container">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <p>Decor</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="catering.html">
+                    <div class="icon-container">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <p>Catering</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="e-invites.html">
+                    <div class="icon-container">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p>Invitations</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="featured-grid">
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Wedding Venues</h3>
+                <p>Find the perfect location for your special day, from elegant ballrooms to scenic outdoor spaces.</p>
+                <a href="venues.html" class="explore-btn">Explore Venues</a>
+            </div>
+            <div class="card-image">
+                <img src="images/venues.jpg" alt="Wedding Venue">
+            </div>
+        </div>
+    
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Photography</h3>
+                <p>Capture every magical moment with our professional photographers who specialize in weddings.</p>
+                <a href="photography.html" class="explore-btn">Explore Vendors</a>
+            </div>
+            <div class="card-image">
+                <img src="images/photography.jpg" alt="Wedding Photography">
+            </div>
+        </div>
+    
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Makeup</h3>
+                <p>Look your absolute best with professional makeup artists who understand bridal beauty.</p>
+                <a href="makeup.html" class="explore-btn">Explore Services</a>
+            </div>
+            <div class="card-image">
+                <img src="images/makeup.jpg" alt="Bridal Makeup">
+            </div>
+        </div>
+    
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Decor</h3>
+                <p>Transform your venue with stunning decorations that match your vision and style.</p>
+                <a href="decor.html" class="explore-btn">Explore Options</a>
+            </div>
+            <div class="card-image">
+                <img src="images/decor.jpg" alt="Wedding Decor">
+            </div>
+        </div>
+    
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Catering</h3>
+                <p>Delight your guests with exquisite cuisine from our selection of top caterers.</p>
+                <a href="catering.html" class="explore-btn">Explore Menus</a>
+            </div>
+            <div class="card-image">
+                <img src="images/catering.jpg" alt="Wedding Catering">
+            </div>
+        </div>
+        <div class="featured-card">
+            <div class="card-content">
+                <h3>Invitations</h3>
+                <p>Set the tone with beautifully designed wedding invitations.</p>
+                <a href="e-invites.html" class="explore-btn">Explore Vendors</a>
+            </div>
+            <div class="card-image">
+                <img src="images/invites.jpg" alt="Wedding Photography">
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <section class="packages">
+        <h2>Wedding Packages (Low To High)</h2>
+        <div class="package-cards">
+            <div class="package-card">
+                <h3>Essential Plan</h3>
+                <div class="price">₹ 2,50,000 +</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Venue Booking</li>
+                    <li><i class="fas fa-check"></i> Basic Photography</li>
+                    <li><i class="fas fa-check"></i> Simple Decor</li>
+                    <li><i class="fas fa-check"></i> Catering (100 guests)</li>
+                    <li><i class="fas fa-check"></i> Digital Invites</li>
+                </ul>
+                <a href="contact.html" class="book-now">Book Now</a>
+            </div>
+            
+            <div class="package-card featured">
+                <h3>Elegant Affair</h3>
+                <div class="price">₹ 4,50,000 +</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Premium Venue</li>
+                    <li><i class="fas fa-check"></i> Full Day Photography</li>
+                    <li><i class="fas fa-check"></i> Elegant Decor</li>
+                    <li><i class="fas fa-check"></i> Catering (200 guests)</li>
+                    <li><i class="fas fa-check"></i> Custom E-Invites</li>
+                </ul>
+                <a href="contact.html" class="book-now">Book Now</a>
+            </div>
+            
+            <div class="package-card">
+                <h3>Royal Grandeur</h3>
+                <div class="price">₹ 10,00,000 + </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Luxury Venue</li>
+                    <li><i class="fas fa-check"></i> Photography & Videography</li>
+                    <li><i class="fas fa-check"></i> Premium Decor</li>
+                    <li><i class="fas fa-check"></i> Gourmet Catering</li>
+                    <li><i class="fas fa-check"></i> AI-Generated Invites</li>
+                </ul>
+                <a href="contact.html" class="book-now">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Why Couples Trust Wedease...</h2>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-feature">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Tailored Wedding Planning</h3>
+                <p>Customized solutions for every couple</p>
+            </div>
+            
+            <div class="testimonial-feature">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Trusted by 500+ Couples</h3>
+                <p>Creating beautiful wedding memories</p>
+            </div>
+            
+            <div class="testimonial-feature">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support Team</h3>
+                <p>Always available to solve your wedding planning queries</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="client-image">
+                        <img src="images/pexels-rina-islam-101153347-31913233.jpg" alt="Client">
+                    </div>
+                    <p class="client-quote">"Wedease made our wedding planning so easy! Highly recommend their services."</p>
+                    <p class="client-name">- Priya & Rahul</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-image">
+                        <img src="images/client2.jpg" alt="Client">
+                    </div>
+                    <p class="client-quote">"The vendors we found through Wedease were exceptional. Our day was perfect!"</p>
+                    <p class="client-name">- Ananya & Vikram</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-image">
+                        <img src="images/pexels-manoj-poosam-3217664-31965639.jpg" alt="Client">
+                    </div>
+                    <p class="client-quote">"The AI-generated invites were stunning and saved us so much time."</p>
+                    <p class="client-name">- Meera & Arjun</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-image">
+                        <img src="images/pexels-manoj-poosam-3217664-31965611.jpg" alt="Client">
+                    </div>
+                    <p class="client-quote">"From venue to catering, everything was perfectly coordinated."</p>
+                    <p class="client-name">- Neha & Karan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Start Planning Your Dream Wedding Today</h2>
+        <p>Let our team turn your vision into reality</p>
+        <a href="contact.html" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Vendor CTA Section -->
+    <section class="vendor-cta-section">
+        <div class="vendor-cta-container">
+            <div class="vendor-cta-content">
+                <div class="vendor-cta-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="vendor-cta-text">
+                    <h2>Are You a Wedding Vendor?</h2>
+                    <p>Join India's fastest growing wedding platform and reach thousands of couples looking for vendors like you!</p>
+                    <div class="vendor-benefits-mini">
+                        <span><i class="fas fa-check-circle"></i> Free Registration</span>
+                        <span><i class="fas fa-check-circle"></i> Increased Visibility</span>
+                        <span><i class="fas fa-check-circle"></i> Direct Bookings</span>
+                    </div>
+                </div>
+                <div class="vendor-cta-action">
+                    <a href="vendor-register.html" class="vendor-register-btn">
+                        <i class="fas fa-arrow-right"></i>
+                        Register as Vendor
+                    </a>
+                    <p class="vendor-cta-note">Join 2000+ vendors already on Wedease</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/location-service.js"></script>
+</body>
+</html>

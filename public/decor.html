@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Decor - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html" class="active">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Wedding Decor</h1>
+        <p>Transform your venue with stunning decorations that match your vision and style.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="price-filter">Price:</label>
+                <select id="price-filter" class="filter-select price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="low">Budget (Under ₹1,00,000)</option>
+                    <option value="medium">Mid-Range (₹1,00,000 - ₹3,00,000)</option>
+                    <option value="high">Premium (Above ₹3,00,000)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="theme-filter">Theme:</label>
+                <select id="theme-filter" class="filter-select theme-filter">
+                    <option value="all">All Themes</option>
+                    <option value="traditional">Traditional</option>
+                    <option value="modern">Modern</option>
+                    <option value="rustic">Rustic</option>
+                    <option value="floral">Floral</option>
+                    <option value="royal">Royal</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" placeholder="Search decor vendors...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vendors-grid">
+        <!-- Decor Vendor 1 -->
+        <div class="vendor-card" data-price="250000" data-location="delhi" data-rating="4.9" data-theme="floral">
+            <div class="vendor-image">
+                <img src="images/decor6.webp" alt="Floral Fantasy">
+            </div>
+            <div class="vendor-info">
+                <h3>Kongu Decarator</h3>
+                <div class="vendor-price">
+                    <span>Saravanampatty</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (128 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Kongu Decarator is a wedding decoration company located in Coimbatore. Wedding ceremonies in India are celebrated with full zeal</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 2 -->
+        <div class="vendor-card" data-price="350000" data-location="mumbai" data-rating="5.0" data-theme="royal">
+            <div class="vendor-image">
+                <img src="images/decor5.webp" alt="Royal Decor">
+            </div>
+            <div class="vendor-info">
+                <h3>Vinayak Decorators</h3>
+                <div class="vendor-price">
+                    <span>Kalapatti,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (95 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹3,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Vinayak Decorators has a team of creative and experienced decorators who are much-prepared to decorate venue what  gorgeous themes for your wedding..</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 3 -->
+        <div class="vendor-card" data-price="150000" data-location="bangalore" data-rating="4.7" data-theme="rustic">
+            <div class="vendor-image">
+                <img src="images/decor4.webp" alt="Rustic Charm">
+            </div>
+            <div class="vendor-info">
+                <h3>Kovai Wedding Decor</h3>
+                <div class="vendor-price">
+                    <span>Saibaba Colony</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,50,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Kovai Wedding Decorator is a company based in the city of Coimbatore  that can offer you a range of customised and specialised decoration services to pick</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 4 -->
+        <div class="vendor-card" data-price="200000" data-location="hyderabad" data-rating="4.8" data-theme="modern">
+            <div class="vendor-image">
+                <img src="images/decor3.webp" alt="Modern Elegance">
+            </div>
+            <div class="vendor-info">
+                <h3>Aura Decor and Events</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (105 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,00,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Beautify your wedding with the exquisite touch of Aura Deco and Events Aura Deco and Events is a premier wedding decorator in Coimbatore.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 5 -->
+        <div class="vendor-card" data-price="120000" data-location="chennai" data-rating="4.6" data-theme="traditional">
+            <div class="vendor-image">
+                <img src="images/decor2.webp" alt="Traditional Treasures">
+            </div>
+            <div class="vendor-info">
+                <h3>Breeze Decorators</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,20,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Breeze Decorators is a wedding decoration company based out of Coimbatore. It is a venture by Mr P. M. Arumugam, who has been in the profession of decoration services</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 6 -->
+        <div class="vendor-card" data-price="400000" data-location="delhi" data-rating="4.9" data-theme="floral">
+            <div class="vendor-image">
+                <img src="images/decor1.webp" alt="Bloom & Bliss">
+            </div>
+            <div class="vendor-info">
+                <h3>Adhista Decorators</h3>
+                <div class="vendor-price">
+                    <span>Singanallur,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (87 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹4,00,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Adhista Event Decorators is a wedding decoration company based out of  Coimbatore. Indian wedding functions hold a very special place in the  hearts of both the bride and the groom</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 7 -->
+        <div class="vendor-card" data-price="180000" data-location="mumbai" data-rating="4.7" data-theme="modern">
+            <div class="vendor-image">
+                <img src="images/decor7.webp" alt="Urban Chic">
+            </div>
+            <div class="vendor-info">
+                <h3>Urban Chic</h3>
+                <div class="vendor-price">
+                    <span>Ukkadam,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (92 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹1,80,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Urban-inspired wedding decor with industrial elements and contemporary styling.</p>
+                </div>
+                <a href="decor-details.html?id=7" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 8 -->
+        <div class="vendor-card" data-price="300000" data-location="bangalore" data-rating="4.8" data-theme="royal">
+            <div class="vendor-image">
+                <img src="images/decor8.webp" alt="Majestic Moments">
+            </div>
+            <div class="vendor-info">
+                <h3>Majestic Moments</h3>
+                <div class="vendor-price">
+                    <span>Pollachi,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (103 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹3,00,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Luxury royal decor with crystal chandeliers, gold accents, and premium drapery.</p>
+                </div>
+                <a href="decor-details.html?id=8" class="view-details">View Details</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 9 -->
+        <div class="vendor-card" data-price="220000" data-location="coimbatore" data-rating="4.8" data-theme="rustic">
+            <div class="vendor-image">
+                <img src="images/decor.jpg" alt="Rustic Elegance">
+            </div>
+            <div class="vendor-info">
+                <h3>Rustic Elegance</h3>
+                <div class="vendor-price">
+                    <span>Peelamedu, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (115 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,20,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Rustic Elegance creates charming wedding spaces with natural elements, wooden accents, and vintage-inspired decor. Perfect for couples seeking a warm, intimate atmosphere.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Decor Vendor 10 -->
+        <div class="vendor-card" data-price="280000" data-location="coimbatore" data-rating="4.9" data-theme="contemporary">
+            <div class="vendor-image">
+                <img src="images/abby-savage-zNsSwsuyP3A-unsplash.jpg" alt="Contemporary Creations">
+            </div>
+            <div class="vendor-info">
+                <h3>Contemporary Creations</h3>
+                <div class="vendor-price">
+                    <span>Race Course, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹2,80,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Contemporary Creations specializes in modern, minimalist wedding decor with clean lines, geometric shapes, and innovative lighting. Their designs are perfect for couples with sophisticated taste.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <section class="cta">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Let us help you find the perfect decor vendor for your special day</p>
+        <a href="venue-request.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

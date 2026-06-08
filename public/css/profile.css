@@ -1,0 +1,813 @@
+/* Profile Page Styles for Wedease */
+
+/* Profile Section */
+.profile-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.profile-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+    width: 280px;
+    background-color: #0c1e35;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.profile-avatar {
+    text-align: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #1a2c4e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 40px;
+    color: #d4af37;
+}
+
+.profile-avatar h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-avatar p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    word-break: break-all;
+}
+
+.profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-menu li {
+    margin-bottom: 5px;
+}
+
+.profile-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.profile-menu li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.profile-menu li.active a,
+.profile-menu li a:hover {
+    background-color: #1a2c4e;
+    color: #d4af37;
+    border-left: 4px solid #d4af37;
+}
+
+.profile-menu li.logout-item {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.profile-menu li.logout-item a {
+    color: #ff6b6b;
+}
+
+.profile-menu li.logout-item a:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+    border-left: 4px solid #ff6b6b;
+}
+
+/* Profile Content */
+.profile-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-header h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #0c1e35;
+    font-size: 24px;
+}
+
+.edit-btn, .create-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.edit-btn i, .create-btn i {
+    margin-right: 5px;
+}
+
+.edit-btn:hover, .create-btn:hover {
+    background-color: #c4a030;
+}
+
+/* Profile Tabs */
+.profile-tab {
+    display: none;
+}
+
+.profile-tab.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Personal Information Tab */
+.info-row {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label {
+    width: 150px;
+    font-weight: 600;
+    color: #0c1e35;
+}
+
+.info-value {
+    flex: 1;
+    color: #6c757d;
+}
+
+.profile-info-edit {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #0c1e35;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #c4a030;
+}
+
+.cancel-btn {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #e9ecef;
+}
+
+/* Bookings Tab */
+.bookings-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #d4af37;
+    color: #fff;
+    border-color: #d4af37;
+}
+
+.booking-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.booking-title {
+    margin: 0;
+    font-size: 18px;
+    color: #0c1e35;
+}
+
+.booking-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #fff4de;
+    color: #ffa800;
+}
+
+.status-confirmed {
+    background-color: #e8f9f5;
+    color: #0acf97;
+}
+
+.status-cancelled {
+    background-color: #feeeee;
+    color: #ff6b6b;
+}
+
+.booking-details {
+    margin-bottom: 15px;
+}
+
+.booking-detail {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.booking-detail-label {
+    width: 120px;
+    font-weight: 500;
+    color: #0c1e35;
+}
+
+.booking-detail-value {
+    flex: 1;
+    color: #6c757d;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.booking-action-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.booking-action-btn i {
+    margin-right: 5px;
+}
+
+.booking-action-btn.view {
+    background-color: #e8f9f5;
+    color: #0acf97;
+    border-color: #e8f9f5;
+}
+
+.booking-action-btn.cancel {
+    background-color: #feeeee;
+    color: #ff6b6b;
+    border-color: #feeeee;
+}
+
+.booking-action-btn:hover {
+    opacity: 0.8;
+}
+
+/* E-Invites Tab */
+.invites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.invite-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.invite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.invite-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.invite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.invite-card:hover .invite-image img {
+    transform: scale(1.05);
+}
+
+.invite-details {
+    padding: 15px;
+}
+
+.invite-title {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #0c1e35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.invite-date {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.invite-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.invite-action-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.invite-action-btn i {
+    margin-right: 5px;
+}
+
+.invite-action-btn.view {
+    background-color: #e8f9f5;
+    color: #0acf97;
+    border-color: #e8f9f5;
+}
+
+.invite-action-btn.share {
+    background-color: #e8f0fe;
+    color: #5647ff;
+    border-color: #e8f0fe;
+}
+
+.invite-action-btn:hover {
+    opacity: 0.8;
+}
+
+/* Favorites Tab */
+.favorites-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: #d4af37;
+    color: #fff;
+    border-color: #d4af37;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.favorite-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.favorite-card:hover .favorite-image img {
+    transform: scale(1.05);
+}
+
+.favorite-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.favorite-details {
+    padding: 15px;
+}
+
+.favorite-title {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #0c1e35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favorite-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.favorite-rating i {
+    color: #ffc107;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.favorite-rating span {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 5px;
+}
+
+.favorite-price {
+    font-size: 14px;
+    color: #0c1e35;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.favorite-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.favorite-action-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e0e0e0;
+    padding: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.favorite-action-btn i {
+    margin-right: 5px;
+}
+
+.favorite-action-btn.view {
+    background-color: #e8f0fe;
+    color: #5647ff;
+    border-color: #e8f0fe;
+}
+
+.favorite-action-btn.remove {
+    background-color: #feeeee;
+    color: #ff6b6b;
+    border-color: #feeeee;
+}
+
+.favorite-action-btn:hover {
+    opacity: 0.8;
+}
+
+/* Account Settings Tab */
+.settings-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.settings-section h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #0c1e35;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-check input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.danger-zone {
+    background-color: #feeeee;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffcdd2;
+}
+
+.delete-account-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.delete-account-btn:hover {
+    background-color: #ff5252;
+}
+
+.warning-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff6b6b;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    color: #6c757d;
+}
+
+.loading-spinner i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #d4af37;
+}
+
+/* No Data Message */
+.no-data-message {
+    text-align: center;
+    padding: 40px 0;
+    color: #6c757d;
+}
+
+.no-data-message i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.no-data-message h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #0c1e35;
+}
+
+.no-data-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .profile-menu {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    
+    .profile-menu li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .profile-menu li a {
+        padding: 8px 15px;
+        border-radius: 5px;
+    }
+    
+    .profile-menu li.active a,
+    .profile-menu li a:hover {
+        border-left: none;
+        background-color: #d4af37;
+        color: #fff;
+    }
+    
+    .profile-menu li.logout-item {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 40px 0;
+    }
+    
+    .profile-content {
+        padding: 20px;
+    }
+    
+    .tab-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .tab-header h2 {
+        margin-bottom: 10px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .bookings-filter,
+    .favorites-categories {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .invites-grid,
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+}

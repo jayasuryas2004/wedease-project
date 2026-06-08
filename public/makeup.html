@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Makeup - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html" class="active">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Bridal Makeup</h1>
+        <p>Look your absolute best with professional makeup artists who understand bridal beauty.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="price-filter">Price:</label>
+                <select id="price-filter" class="filter-select price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="low">Budget (Under ₹15,000)</option>
+                    <option value="medium">Mid-Range (₹15,000 - ₹40,000)</option>
+                    <option value="high">Premium (Above ₹40,000)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="style-filter">Style:</label>
+                <select id="style-filter" class="filter-select style-filter">
+                    <option value="all">All Styles</option>
+                    <option value="traditional">Traditional</option>
+                    <option value="modern">Modern</option>
+                    <option value="hd">HD Makeup</option>
+                    <option value="airbrush">Airbrush</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" placeholder="Search makeup artists...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vendors-grid">
+        <!-- Makeup Artist 1 -->
+        <div class="vendor-card" data-price="25000" data-location="delhi" data-rating="4.9" data-style="hd">
+            <div class="vendor-image">
+                <img src="images/makeup6.webp" alt="Glamour Studio">
+            </div>
+            <div class="vendor-info">
+                <h3>Vaishuz Makeover</h3>
+                <div class="vendor-price">
+                    <span>Vadavalli,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (142 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹25,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Vaishuz Makeover is a makeup service based in the city of Coimbatore. The team of makeup artist here will assure you have a well-defined.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 2 -->
+        <div class="vendor-card" data-price="45000" data-location="mumbai" data-rating="5.0" data-style="airbrush">
+            <div class="vendor-image">
+                <img src="images/makeup5.webp" alt="Bridal Bliss">
+            </div>
+            <div class="vendor-info">
+                <h3>Priyuz Makeover</h3>
+                <div class="vendor-price">
+                    <span>Ganapathy,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹45,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Priyuz Makeover is a makeup service based in the city of Coimbatore. It is every girl's dream to look one of a kind.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 3 -->
+        <div class="vendor-card" data-price="18000" data-location="bangalore" data-rating="4.7" data-style="traditional">
+            <div class="vendor-image">
+                <img src="images/makeup4.webp" alt="Elegance Beauty">
+            </div>
+            <div class="vendor-info">
+                <h3>Chandini Makeover</h3>
+                <div class="vendor-price">
+                    <span>RS Puram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (115 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹18,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Chandini Makeover ensures that they use top-notch quality henna so that your hands shines and sparkles on each wedding function</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 4 -->
+        <div class="vendor-card" data-price="35000" data-location="hyderabad" data-rating="4.8" data-style="modern">
+            <div class="vendor-image">
+                <img src="images/makeup3.webp" alt="Glam Squad">
+            </div>
+            <div class="vendor-info">
+                <h3>Aaaru Makeove</h3>
+                <div class="vendor-price">
+                    <span>Ukkadam,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (132 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹35,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Aaaru Professional Makeup Artist is a makeover artist based in the city of Coimbatore. She has been in this profession since the year 2016</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 5 -->
+        <div class="vendor-card" data-price="15000" data-location="chennai" data-rating="4.6" data-style="hd">
+            <div class="vendor-image">
+                <img src="images/groommakeup.jpg" alt="Beauty Blush">
+            </div>
+            <div class="vendor-info">
+                <h3>Makeup Siva</h3>
+                <div class="vendor-price">
+                    <span>Peelamedu,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (95 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹15,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Makeup Siva is a wonderful makeup artist based in Coimbatore and aims at fulfilling the makeover needs of the brides with perfection.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 6 -->
+        <div class="vendor-card" data-price="55000" data-location="delhi" data-rating="4.9" data-style="airbrush">
+            <div class="vendor-image">
+                <img src="images/groom2image.jpg" alt="Royal Makeovers">
+            </div>
+            <div class="vendor-info">
+                <h3>Keerthi Makeover</h3>
+                <div class="vendor-price">
+                    <span>Lakshimi Mills,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (87 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹55,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Get to know your bridal makeup artist, Keerthi Makeup Studio & Academy Keerthi Makeovers Hair and Makeup Academy is an emerging makeup service provider in Coimbatore.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Princing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 7 -->
+        <div class="vendor-card" data-price="22000" data-location="bangalore" data-rating="4.7" data-style="modern">
+            <div class="vendor-image">
+                <img src="images/groom3image.jpg" alt="Makeup Maven">
+            </div>
+            <div class="vendor-info">
+                <h3>Makeup Maven</h3>
+                <div class="vendor-price">
+                    <span>Vadavalli,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (103 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹22,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Trendy and Instagram-worthy bridal makeup looks with pre-wedding trial sessions.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+       
+        <!-- Makeup Artist 8 -->
+        <div class="vendor-card" data-price="40000" data-location="hyderabad" data-rating="4.9" data-style="hd">
+            <div class="vendor-image">
+                <img src="images/groom4image.jpg" alt="Flawless Faces">
+            </div>
+            <div class="vendor-info">
+                <h3>Flawless Faces</h3>
+                <div class="vendor-price">
+                    <span>Ondipudur,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (92 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹40,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>HD makeup services with a team approach, covering bride and bridal party with customized looks.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 9 -->
+        <div class="vendor-card" data-price="28000" data-location="coimbatore" data-rating="4.8" data-style="traditional">
+            <div class="vendor-image">
+                <img src="images/makeup.jpg" alt="Bridal Elegance">
+            </div>
+            <div class="vendor-info">
+                <h3>Bridal Elegance</h3>
+                <div class="vendor-price">
+                    <span>Saibaba Colony, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (118 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹28,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Bridal Elegance specializes in traditional South Indian bridal makeup with a modern twist. Their services include makeup, hairstyling, and draping.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Makeup Artist 10 -->
+        <div class="vendor-card" data-price="32000" data-location="coimbatore" data-rating="4.7" data-style="airbrush">
+            <div class="vendor-image">
+                <img src="images/beautiful-woman-long-red-dress-walks-around-city-with-her-husband.jpg" alt="Glam Divas">
+            </div>
+            <div class="vendor-info">
+                <h3>Glam Divas</h3>
+                <div class="vendor-price">
+                    <span>Race Course, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (96 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹32,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Glam Divas offers premium airbrush makeup services for brides who want a flawless, long-lasting look. They also provide pre-bridal packages and skin consultations.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <section class="cta">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Let us help you find the perfect makeup artist for your special day</p>
+        <a href="makeup-request.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

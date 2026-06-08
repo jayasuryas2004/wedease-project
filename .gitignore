@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.example
+
+# Logs and Debug
+*.log
+npm-debug.log*
+.DS_Store
+
+# IDE Settings
+.vscode/
+.idea/

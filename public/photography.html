@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Photography - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html" class="active">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Wedding Photography</h1>
+        <p>Capture every magical moment with our professional photographers who specialize in weddings.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="price-filter">Price:</label>
+                <select id="price-filter" class="filter-select price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="low">Budget (Under ₹25,000)</option>
+                    <option value="medium">Mid-Range (₹25,000 - ₹75,000)</option>
+                    <option value="high">Premium (Above ₹75,000)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rating-filter">Rating:</label>
+                <select id="rating-filter" class="filter-select rating-filter">
+                    <option value="all">All Ratings</option>
+                    <option value="4plus">4★ & Above</option>
+                    <option value="3plus">3★ & Above</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="style-filter">Style:</label>
+                <select id="style-filter" class="filter-select style-filter">
+                    <option value="all">All Styles</option>
+                    <option value="traditional">Traditional</option>
+                    <option value="candid">Candid</option>
+                    <option value="cinematic">Cinematic</option>
+                    <option value="documentary">Documentary</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" placeholder="Search photographers...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vendors-grid">
+        <!-- Photographer 1 -->
+        <div class="vendor-card" data-price="45000" data-location="delhi" data-rating="4.9" data-style="traditional">
+            <div class="vendor-image">
+                <img src="images/photo1.webp" alt="Pixel Perfect Photography">
+            </div>
+            <div class="vendor-info">
+                <h3>Twin Hearts Studio</h3>
+                <div class="vendor-price">
+                    <span>Saravanampatty</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (156 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹45,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Twin Hearts Studio is a wedding photography and cinematography company  based out in the city of Coimbatore.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 2 -->
+        <div class="vendor-card" data-price="85000" data-location="coimbatore" data-rating="4.8" data-style="candid">
+            <div class="vendor-image">
+                <img src="images/photo2a.webp" alt="Moments Forever">
+            </div>
+            <div class="vendor-info">
+                <h3>Monk Photography</h3>
+                <div class="vendor-price">
+                    <span>RS Puram, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (132 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹85,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Monk Photography is a wedding photography service located in Coimbatore. The couple getting married usually desires to get the pictures clicked </p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 3 -->
+        <div class="vendor-card" data-price="35000" data-location="bangalore" data-rating="4.7" data-style="traditional">
+            <div class="vendor-image">
+                <img src="images/photo3a.webp" alt="Capture Memories">
+            </div>
+            <div class="vendor-info">
+                <h3>Blinkzone photography</h3>
+                <div class="vendor-price">
+                    <span>Ondipudur,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (98 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹35,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Blinkzone Photography is a wedding photographer located in Coimbatore. The wedding ceremony is not just a traditional ritual</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 4 -->
+        <div class="vendor-card" data-price="65000" data-location="hyderabad" data-rating="4.9" data-style="cinematic">
+            <div class="vendor-image">
+                <img src="images/photo4a.webp" alt="Wedding Stories">
+            </div>
+            <div class="vendor-info">
+                <h3>StudioSix</h3>
+                <div class="vendor-price">
+                    <span>Saibaba,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (175 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹65,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Their team of remarkable photographers will make your wedding function  captured in the most perfect way. They have  strive to perform better with wedding function.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 5 -->
+        <div class="vendor-card" data-price="55000" data-location="chennai" data-rating="4.6" data-style="documentary">
+            <div class="vendor-image">
+                <img src="images/photo5a.webp" alt="Frame Perfect">
+            </div>
+            <div class="vendor-info">
+                <h3>Wedd studios</h3>
+                <div class="vendor-price">
+                    <span>Lakshmi Mills,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹55,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Wedd Studios is a company based in the city of Coimbatore that specialises in wedding photography and videography services and can offer a wide range of other related services.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+          <!-- Photographer 7 -->
+          <div class="vendor-card" data-price="55000" data-location="chennai" data-rating="4.6" data-style="traditional">
+            <div class="vendor-image">
+                <img src="images/photo1a.webp" alt="Frame Perfect">
+            </div>
+            <div class="vendor-info">
+                <h3>Wedding photo studios</h3>
+                <div class="vendor-price">
+                    <span>Lakshmi Mills,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹55,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Wedding Studios is a company based in the city of Coimbatore that specialises in wedding photography and videography services and can offer a wide range of other related services.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+          <!-- Photographer 8-->
+          <div class="vendor-card" data-price="55000" data-location="chennai" data-rating="4.6" data-style="candid">
+            <div class="vendor-image">
+                <img src="images/photo8.webp" alt="Frame Perfect">
+            </div>
+            <div class="vendor-info">
+                <h3>Wedd studios</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.6 (112 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹45,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Nextgen Studio by Velu is ready to travel with you both within the city and outside to make your event successful. Delivery of the final photos is within a month, so you can visit and relive all your joyful memories with your loved ones again. </p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 6 -->
+        <div class="vendor-card" data-price="95000" data-location="delhi" data-rating="5.0" data-style="cinematic">
+            <div class="vendor-image">
+                <img src="images/photo6a.webp" alt="Elite Imagery">
+            </div>
+            <div class="vendor-info">
+                <h3>IRICH photography</h3>
+                <div class="vendor-price">
+                    <span>Gandhipuram,Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (87 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹95,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>IRICH Photography is a wedding photography and videography company based out of Coimbatore. Weddings are the most remarkable occasions.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 9 -->
+        <div class="vendor-card" data-price="75000" data-location="coimbatore" data-rating="4.8" data-style="candid">
+            <div class="vendor-image">
+                <img src="images/photography.jpg" alt="Candid Moments">
+            </div>
+            <div class="vendor-info">
+                <h3>Candid Pixels</h3>
+                <div class="vendor-price">
+                    <span>Peelamedu, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8 (124 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹75,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Candid Pixels specializes in capturing authentic moments with a journalistic approach. Their team excels in candid photography and cinematic wedding films.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+        <!-- Photographer 10 -->
+        <div class="vendor-card" data-price="60000" data-location="coimbatore" data-rating="4.7" data-style="documentary">
+            <div class="vendor-image">
+                <img src="images/pexels-rina-islam-101153347-31913233.jpg" alt="Eternal Memories">
+            </div>
+            <div class="vendor-info">
+                <h3>Eternal Frames</h3>
+                <div class="vendor-price">
+                    <span>Singanallur, Coimbatore</span>
+                </div>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7 (108 reviews)</span>
+                </div>
+                <div class="vendor-price">
+                    <span>Starting from ₹60,000</span>
+                </div>
+                <div class="vendor-description">
+                    <p>Eternal Frames creates timeless wedding memories through their artistic photography and cinematography. They offer customized packages to suit every budget.</p>
+                </div>
+                <a href="venue-request.html" class="view-details">Request Pricing</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <section class="cta">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Let us help you find the perfect photographer for your special day</p>
+        <a href="venue-request.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

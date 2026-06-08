@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/user-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <!-- Profile Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 id="profile-name">Loading...</h3>
+                        <p id="profile-email">Loading...</p>
+                    </div>
+                    <ul class="profile-menu">
+                        <li class="active" data-tab="profile-info">
+                            <a href="#profile-info"><i class="fas fa-user"></i> Personal Information</a>
+                        </li>
+                        <li data-tab="bookings">
+                            <a href="#bookings"><i class="fas fa-calendar-check"></i> My Bookings</a>
+                        </li>
+                        <li data-tab="invites">
+                            <a href="#invites"><i class="fas fa-envelope-open-text"></i> My E-Invites</a>
+                        </li>
+                        <li data-tab="favorites">
+                            <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a>
+                        </li>
+                        <li data-tab="settings">
+                            <a href="#settings"><i class="fas fa-cog"></i> Account Settings</a>
+                        </li>
+                        <li class="logout-item">
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- Personal Information Tab -->
+                    <div class="profile-tab active" id="profile-info">
+                        <div class="tab-header">
+                            <h2>Personal Information</h2>
+                            <button class="edit-btn" id="edit-profile-btn">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="profile-info-view" id="profile-info-view">
+                            <div class="info-row">
+                                <div class="info-label">Full Name</div>
+                                <div class="info-value" id="info-name">Loading...</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Email</div>
+                                <div class="info-value" id="info-email">Loading...</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Phone</div>
+                                <div class="info-value" id="info-phone">Not provided</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Address</div>
+                                <div class="info-value" id="info-address">Not provided</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Member Since</div>
+                                <div class="info-value" id="info-member-since">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="profile-info-edit" id="profile-info-edit" style="display: none;">
+                            <form id="profile-edit-form">
+                                <div class="form-group">
+                                    <label for="edit-name">Full Name</label>
+                                    <input type="text" id="edit-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-email">Email</label>
+                                    <input type="email" id="edit-email" name="email" required disabled>
+                                    <small>Email cannot be changed</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-phone">Phone</label>
+                                    <input type="tel" id="edit-phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-address">Address</label>
+                                    <textarea id="edit-address" name="address" rows="3"></textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="save-btn">Save Changes</button>
+                                    <button type="button" class="cancel-btn" id="cancel-edit-btn">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Tab -->
+                    <div class="profile-tab" id="bookings">
+                        <div class="tab-header">
+                            <h2>My Bookings</h2>
+                        </div>
+                        <div class="bookings-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                            <button class="filter-btn" data-filter="past">Past</button>
+                            <button class="filter-btn" data-filter="cancelled">Cancelled</button>
+                        </div>
+                        <div class="bookings-list" id="bookings-list">
+                            <div class="loading-spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <p>Loading your bookings...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-Invites Tab -->
+                    <div class="profile-tab" id="invites">
+                        <div class="tab-header">
+                            <h2>My E-Invites</h2>
+                            <a href="e-invites.html" class="create-btn">
+                                <i class="fas fa-plus"></i> Create New
+                            </a>
+                        </div>
+                        <div class="invites-grid" id="invites-grid">
+                            <div class="loading-spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <p>Loading your e-invites...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Favorites Tab -->
+                    <div class="profile-tab" id="favorites">
+                        <div class="tab-header">
+                            <h2>My Favorites</h2>
+                        </div>
+                        <div class="favorites-categories">
+                            <button class="category-btn active" data-category="all">All</button>
+                            <button class="category-btn" data-category="venues">Venues</button>
+                            <button class="category-btn" data-category="photography">Photography</button>
+                            <button class="category-btn" data-category="makeup">Makeup</button>
+                            <button class="category-btn" data-category="decor">Decor</button>
+                            <button class="category-btn" data-category="catering">Catering</button>
+                        </div>
+                        <div class="favorites-grid" id="favorites-grid">
+                            <div class="loading-spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <p>Loading your favorites...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Settings Tab -->
+                    <div class="profile-tab" id="settings">
+                        <div class="tab-header">
+                            <h2>Account Settings</h2>
+                        </div>
+                        <div class="settings-section">
+                            <h3>Change Password</h3>
+                            <form id="change-password-form">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password" name="currentPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" name="newPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password" name="confirmPassword" required>
+                                </div>
+                                <button type="submit" class="save-btn">Update Password</button>
+                            </form>
+                        </div>
+                        <div class="settings-section">
+                            <h3>Notification Preferences</h3>
+                            <form id="notification-form">
+                                <div class="form-check">
+                                    <input type="checkbox" id="email-notifications" name="emailNotifications" checked>
+                                    <label for="email-notifications">Email Notifications</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="booking-reminders" name="bookingReminders" checked>
+                                    <label for="booking-reminders">Booking Reminders</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="promotional-emails" name="promotionalEmails" checked>
+                                    <label for="promotional-emails">Promotional Emails</label>
+                                </div>
+                                <button type="submit" class="save-btn">Save Preferences</button>
+                            </form>
+                        </div>
+                        <div class="settings-section danger-zone">
+                            <h3>Danger Zone</h3>
+                            <button class="delete-account-btn" id="delete-account-btn">Delete Account</button>
+                            <p class="warning-text">This action is irreversible. All your data will be permanently deleted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/wedeaselogo.png" alt="Wedease">
+                    <p>Making wedding planning easier</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                        <li><a href="e-invites.html">E-Invites</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Wedding Street, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope"></i> info@wedease.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates and offers</p>
+                    <form>
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

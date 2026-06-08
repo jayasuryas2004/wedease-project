@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Beautiful E-Invites - Wedease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="venues.html">VENUES</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="makeup.html">MAKEUP</a></li>
+                <li><a href="decor.html">DECOR</a></li>
+                <li><a href="catering.html">CATERING</a></li>
+                <li><a href="e-invites.html" class="active">E-INVITES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">LOGIN / REGISTER</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="e-invites-section">
+        <div class="e-invites-container">
+            <div class="e-invites-header">
+                <h2>Create Beautiful Wedding Invitations</h2>
+                <p>Design personalized wedding invitations for your special day with our elegant templates.</p>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Select a Template</h3>
+                            <p>Choose from our collection of beautiful wedding invitation templates</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Customize Details</h3>
+                            <p>Add your names, wedding date, time, venue, and a personal message</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Generate & Share</h3>
+                            <p>Preview your invitation, download it, or share it with your guests</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="e-invites-form">
+                <div class="template-info">
+                    <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="info-text">
+                        <p>Create beautiful wedding invitations by filling out the form below. Our system will generate a custom invitation using either AI-generated images or elegant pre-designed templates.</p>
+                        <p>Required fields are marked with an asterisk (*)</p>
+                    </div>
+                </div>
+
+                <form id="invite-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bride-name">Bride's Name *</label>
+                            <input type="text" id="bride-name" name="brideName" placeholder="Enter bride's name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="groom-name">Groom's Name *</label>
+                            <input type="text" id="groom-name" name="groomName" placeholder="Enter groom's name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="wedding-date">Wedding Date *</label>
+                            <input type="date" id="wedding-date" name="weddingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wedding-time">Wedding Time</label>
+                            <input type="time" id="wedding-time" name="weddingTime">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="venue-name">Venue Name *</label>
+                            <input type="text" id="venue-name" name="venueName" placeholder="Enter venue name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="venue-address">Venue Address</label>
+                            <input type="text" id="venue-address" name="venueAddress" placeholder="Enter venue address">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="template-selector">Invitation Template</label>
+                            <select id="template-selector" name="templateId">
+                                <option value="">Select a template</option>
+                                <!-- Templates will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="color-scheme">Color Accent</label>
+                            <select id="color-scheme" name="colorScheme">
+                                <option value="gold and blue">Gold & Blue</option>
+                                <option value="silver and white">Silver & White</option>
+                                <option value="rose gold">Rose Gold</option>
+                                <option value="navy">Navy & Silver</option>
+                                <option value="green">Green & Gold</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div id="template-preview" class="template-preview-container">
+                            <!-- Template preview will be shown here -->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custom-message">Custom Message (Optional)</label>
+                        <textarea id="custom-message" name="customMessage" placeholder="Enter a custom message for your invitation"></textarea>
+                    </div>
+
+
+
+                    <button type="button" class="submit-btn preview-btn">Generate Invitation</button>
+                </form>
+
+                <div class="e-invites-preview">
+                    <h3>Your Invitation Preview</h3>
+                    <div class="preview-placeholder" id="invitation-preview-container">
+                        <div class="preview-message" style="text-align: center; padding: 2rem;">
+                            <i class="fas fa-envelope-open-text" style="font-size: 3.5rem; color: var(--secondary-color); margin-bottom: 1.5rem; display: block;"></i>
+                            <h3 style="color: var(--secondary-color); font-size: 1.8rem; margin-bottom: 1rem;">Template-Based Invitations</h3>
+                            <p style="margin-bottom: 1rem; font-size: 1.1rem;">Select a beautiful template and fill in your wedding details.</p>
+                            <p style="color: #aaa; font-style: italic;">Your personalized invitation will appear here.</p>
+                            <div style="margin-top: 1.5rem; border-top: 1px dashed var(--secondary-color); padding-top: 1rem;">
+                                <span style="background-color: rgba(240, 193, 75, 0.1); padding: 0.5rem 1rem; border-radius: 4px; display: inline-block;">
+                                    <i class="fas fa-info-circle" style="color: var(--secondary-color); margin-right: 0.5rem;"></i>
+                                    Updated: May 2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-actions">
+                        <button class="preview-btn download-btn" disabled>Download</button>
+                        <button class="preview-btn share-btn" disabled>Share</button>
+                        <button class="preview-btn reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="testimonials">
+        <h2>What Our Couples Say About Our E-Invites</h2>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="client-image">
+                    <img src="images/client1.jpg" alt="Client">
+                </div>
+                <p class="client-quote">"The elegant invitation templates were stunning! Our guests loved the personalized design."</p>
+                <p class="client-name">- Priya & Rahul</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="client-image">
+                    <img src="images/client2.jpg" alt="Client">
+                </div>
+                <p class="client-quote">"We saved so much time and money using Wedease's e-invite feature. Highly recommend!"</p>
+                <p class="client-name">- Ananya & Vikram</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="client-image">
+                    <img src="images/client3.jpg" alt="Client">
+                </div>
+                <p class="client-quote">"The template selection was perfect. The invites matched our wedding theme beautifully."</p>
+                <p class="client-name">- Meera & Arjun</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/wedeaselogo.png" alt="Wedease Logo">
+                <p>Wedding & Event Planning Simplified</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="venues.html">Venues</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="makeup.html">Makeup</a></li>
+                        <li><a href="decor.html">Decor</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p>Email: info@wedease.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wedease. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Add html2canvas library for invitation download and sharing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/e-invites.js"></script>
+    <script src="js/invite-templates.js"></script>
+    <script>
+        // Force a refresh if the page was loaded from cache
+        if (performance.navigation.type === 2) {
+            location.reload(true);
+        }
+    </script>
+</body>
+</html>

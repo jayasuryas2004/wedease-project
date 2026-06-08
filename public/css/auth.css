@@ -1,0 +1,209 @@
+/* --- Original Wedease Auth Styles (Navy & Yellow) --- */
+
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Left Side - Solid Navy */
+.auth-showcase {
+    flex: 1;
+    background-color: var(--primary-color, #0f1b33);
+}
+
+/* Right Side - White background with Yellow Card */
+.auth-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.back-link {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: var(--primary-color, #0f1b33);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth-card {
+    background-color: var(--secondary-color, #f0c14b);
+    width: 100%;
+    max-width: 420px;
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-logo {
+    margin-bottom: 1.5rem;
+}
+
+.auth-logo img {
+    height: 40px;
+}
+
+.auth-title {
+    font-size: 2.2rem;
+    color: var(--primary-color, #0f1b33);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.auth-subtitle {
+    color: var(--primary-color, #0f1b33);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary-color, #0f1b33);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: inherit;
+    color: #333;
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--primary-color, #0f1b33);
+}
+
+.form-options a {
+    color: var(--primary-color, #0f1b33);
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--primary-color, #0f1b33);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1a2a4d;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-color, #0f1b33);
+}
+
+.auth-footer a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--primary-color, #0f1b33);
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(15, 27, 51, 0.2);
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 0.85rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color, #0f1b33);
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .auth-container {
+        flex-direction: column;
+    }
+    .auth-showcase {
+        display: none; /* Hides the navy side on small screens */
+    }
+    .auth-form-container {
+        padding: 1rem;
+    }
+}
