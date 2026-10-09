@@ -45,6 +45,18 @@ wedease-project/
 └── package.json         # Project dependencies
 ```
 
+
+
+``` mermaid
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+```
+
 ## License
 
 MIT
+
+Adding More Changes
